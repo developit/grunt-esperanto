@@ -36,7 +36,6 @@ exports.esperanto = {
 
     test.done();
   },
-  /*
   custom_options: function(test) {
     test.expect(1);
 
@@ -46,5 +45,4 @@ exports.esperanto = {
 
     test.done();
   },
-  */
 };
