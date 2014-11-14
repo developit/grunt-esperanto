@@ -1,0 +1,7 @@
+define(['lib'], function (name) {
+
+	'use strict';
+	
+	name+'';
+
+});
