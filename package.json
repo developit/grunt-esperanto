@@ -1,7 +1,7 @@
 {
   "name": "grunt-esperanto",
   "description": "Wrapper for the esperanto module transpiler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/developit/grunt-esperanto",
   "author": {
     "name": "Jason Miller",
@@ -28,9 +28,9 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
     "grunt": "~0.4.5"
   },
   "peerDependencies": {
@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "esperanto": "^0.4.0"
+    "esperanto": "^0.6.6"
   }
 }
