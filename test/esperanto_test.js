@@ -30,8 +30,8 @@ exports.esperanto = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options').trim();
-    var expected = grunt.file.read('test/expected/default_options').trim();
+    var actual = grunt.file.read('tmp/default_options').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/default_options').replace(/\s|\n/g,'');
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
     test.done();
@@ -39,8 +39,8 @@ exports.esperanto = {
   custom_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
+    var actual = grunt.file.read('tmp/custom_options').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/custom_options').replace(/\s|\n/g,'');
     test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
 
     test.done();

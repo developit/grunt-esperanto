@@ -1,8 +1,4 @@
-(function () {
+'use strict';
 
-	'use strict';
-	
-	var name = require('lib');
-	name+'';
-
-}).call(global);
+var name = require('lib');
+name+'';
