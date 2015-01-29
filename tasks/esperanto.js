@@ -23,7 +23,9 @@ module.exports = function(grunt) {
 			commonjs : 'toCjs'
 		}[String(options.type).toLowerCase()] || 'toAmd';
 
-		var transpile = esperanto[method].bind(esperanto);
+		function transpile(code) {
+			return esperanto[method](code).code;
+		}
 
 		this.files.forEach(function(f) {
 			grunt.file.write(
