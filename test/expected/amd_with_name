@@ -4,4 +4,7 @@ define('myBundle', ['lib'], function (name) {
 
 	name+'';
 
+
+	return 'foo';
+
 });
