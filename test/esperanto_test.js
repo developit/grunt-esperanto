@@ -45,4 +45,13 @@ exports.esperanto = {
 
     test.done();
   },
+  umd: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/umd').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/umd').replace(/\s|\n/g,'');
+    test.equal(actual, expected, 'should describe what the umd behavior is.');
+
+    test.done();
+  },
 };

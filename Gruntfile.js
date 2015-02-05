@@ -45,6 +45,17 @@ module.exports = function(grunt) {
         files: {
           'tmp/custom_options': ['test/fixtures/testing']
         }
+      },
+      umd: {
+        options: {
+          separator: '\n',
+          type: 'umd',
+          name : 'modname',
+          strict : 'true'
+        },
+        files: {
+          'tmp/umd': ['test/fixtures/testing']
+        }
       }
     },
 
