@@ -13,12 +13,13 @@ var esperanto = require('esperanto');
 module.exports = function(grunt) {
 	grunt.registerMultiTask('esperanto', 'Wrapper for the esperanto module transpiler', function() {
 		var bl = ['type', 'separator'],
-			options, method, opts, i;
+			options, method;
 
 		options = this.options({
 			// defaults
 			type : 'amd',
-			separator : '\n'
+			separator : '\n',
+			bundleOpts: {}
 		});
 
 		method = {
@@ -27,15 +28,8 @@ module.exports = function(grunt) {
 			umd : 'toUmd'
 		}[String(options.type).toLowerCase()] || 'toAmd';
 
-		opts = {};
-		for (i in options) {
-			if (options.hasOwnProperty(i) && bl.indexOf(i)<0) {
-				opts[i] = options[i];
-			}
-		}
-
 		function transpile(code) {
-			return esperanto[method](code, opts).code;
+			return esperanto[method](code, options.bundleOpts).code;
 		}
 
 		this.files.forEach(function(f) {

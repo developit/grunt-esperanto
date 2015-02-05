@@ -47,7 +47,19 @@ A string to place between concatenated files.
 Type: `String`
 Default value: `'amd'`
 
-Pass `'commonjs'` or `'cjs'` to output CommonJS modules instead of AMD modules.
+Specify the output format.
+
+**Available types:**
+
+- `'amd'` to output AMD modules, works with e.g. [Require.JS](http://requirejs.org/)
+- `'commonjs'` or `cjs` to output CommonJS modules, works with **node.js** and **io.js**.
+- `'umd'` to output UMD (universal module definition) content - works as an AMD module, a CommonJS module, or as a browser global.
+
+#### options.bundleOpts
+Type: `Object`
+Default value: `{}`
+
+Accept an esperanto [options](https://github.com/esperantojs/esperanto/wiki/Converting-a-single-module#options) parameter.
 
 ### Usage Examples
 

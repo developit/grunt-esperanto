@@ -36,12 +36,21 @@ exports.esperanto = {
 
     test.done();
   },
-  custom_options: function(test) {
+  commonjs: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options').replace(/\s|\n/g,'');
-    var expected = grunt.file.read('test/expected/custom_options').replace(/\s|\n/g,'');
+    var actual = grunt.file.read('tmp/commonjs').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/commonjs').replace(/\s|\n/g,'');
     test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+
+    test.done();
+  },
+  amd_with_name: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/amd_with_name').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/amd_with_name').replace(/\s|\n/g,'');
+    test.equal(actual, expected, 'accept esperanto options setting the amd name.');
 
     test.done();
   },
@@ -53,5 +62,5 @@ exports.esperanto = {
     test.equal(actual, expected, 'should describe what the umd behavior is.');
 
     test.done();
-  },
+  }
 };

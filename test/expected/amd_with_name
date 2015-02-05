@@ -1,0 +1,7 @@
+define('myBundle', ['lib'], function (name) {
+
+	'use strict';
+
+	name+'';
+
+});

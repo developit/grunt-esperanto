@@ -4,6 +4,6 @@
 	factory(global.name)
 }(this, function (name) { 'use strict';
 
-	name['default']+'';
+	name+'';
 
 }));
