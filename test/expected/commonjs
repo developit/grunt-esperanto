@@ -2,3 +2,5 @@
 
 var name = require('lib');
 name+'';
+
+module.exports = 'foo';

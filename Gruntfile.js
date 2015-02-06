@@ -37,21 +37,31 @@ module.exports = function(grunt) {
           'tmp/default_options': ['test/fixtures/testing']
         }
       },
-      custom_options: {
+      commonjs: {
         options: {
           separator: '\n',
           type: 'cjs'
         },
         files: {
-          'tmp/custom_options': ['test/fixtures/testing']
+          'tmp/commonjs': ['test/fixtures/testing']
+        }
+      },
+      amd_with_name: {
+        options: {
+          bundleOpts: {
+            amdName: 'myBundle'
+          }
+        },
+        files: {
+          'tmp/amd_with_name': ['test/fixtures/testing']
         }
       },
       umd: {
         options: {
-          separator: '\n',
           type: 'umd',
-          name : 'modname',
-          strict : 'true'
+          bundleOpts: {
+            name: 'custom_name'
+          }
         },
         files: {
           'tmp/umd': ['test/fixtures/testing']

@@ -1,4 +1,4 @@
-define(['lib'], function (name) {
+define('myBundle', ['lib'], function (name) {
 
 	'use strict';
 

@@ -1,2 +1,4 @@
 import name from 'lib';
 name+'';
+
+export default 'foo';
