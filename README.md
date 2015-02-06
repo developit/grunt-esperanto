@@ -1,6 +1,6 @@
 # grunt-esperanto
 
-> Wrapper for the [esperanto](https://github.com/rich-harris/esperanto) module transpiler
+> Wrapper for the [esperanto](https://github.com/esperantojs/esperanto) module transpiler
 
 [![CI](http://img.shields.io/travis/developit/grunt-esperanto.svg?style=flat)](https://travis-ci.org/developit/grunt-esperanto)
 [![NPM](http://img.shields.io/npm/v/grunt-esperanto.svg?style=flat)](https://www.npmjs.com/package/grunt-esperanto)
