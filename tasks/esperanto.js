@@ -33,6 +33,11 @@ module.exports = function(grunt) {
 				try {
 					return esperanto[method](code, options.bundleOpts).code;
 				} catch (err) {
+					// Direct throw config errors
+					if (err.name === 'EsperantoError') {
+						throw err;
+					}
+
 					// Rethrow with the file information
 					var toThrow = new Error('Error parsing ' + f.src + ': ' + (err.stack.split('\n')[0]));
 					toThrow.stack = 'Error parsing ' + f.src + ': ' + err.stack;
