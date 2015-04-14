@@ -28,11 +28,18 @@ module.exports = function(grunt) {
 			umd : 'toUmd'
 		}[String(options.type).toLowerCase()] || 'toAmd';
 
-		function transpile(code) {
-			return esperanto[method](code, options.bundleOpts).code;
-		}
-
 		this.files.forEach(function(f) {
+			function transpile(code) {
+				try {
+					return esperanto[method](code, options.bundleOpts).code;
+				} catch (err) {
+					// Rethrow with the file information
+					var toThrow = new Error('Error parsing ' + f.src + ': ' + (err.stack.split('\n')[0]));
+					toThrow.stack = 'Error parsing ' + f.src + ': ' + err.stack;
+					throw toThrow;
+				}
+			}
+
 			grunt.file.write(
 				f.dest,
 				f.src.filter(function(n, e) {
