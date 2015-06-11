@@ -1,0 +1,10 @@
+define('test/fixtures/testing', ['lib'], function (name) {
+
+	'use strict';
+
+	name+'';
+
+
+	return 'foo';
+
+});
