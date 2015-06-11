@@ -54,6 +54,15 @@ exports.esperanto = {
 
     test.done();
   },
+  amd_with_file_path_name: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/amd_with_file_path_name').replace(/\s|\n/g,'');
+    var expected = grunt.file.read('test/expected/amd_with_file_path_name').replace(/\s|\n/g,'');
+    test.equal(actual, expected, 'accept esperanto options using the file path as the amd name.');
+
+    test.done();
+  },
   umd: function(test) {
     test.expect(1);
 

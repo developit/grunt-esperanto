@@ -56,6 +56,14 @@ module.exports = function(grunt) {
           'tmp/amd_with_name': ['test/fixtures/testing']
         }
       },
+      amd_with_file_path_name: {
+        options: {
+          filePathAsModule: true
+        },
+        files: {
+          'tmp/amd_with_file_path_name': ['test/fixtures/testing']
+        }
+      },
       umd: {
         options: {
           type: 'umd',

@@ -19,7 +19,8 @@ module.exports = function(grunt) {
 			// defaults
 			type : 'amd',
 			separator : '\n',
-			bundleOpts: {}
+			bundleOpts: {},
+			filePathAsModule: false
 		});
 
 		method = {
@@ -31,7 +32,19 @@ module.exports = function(grunt) {
 		this.files.forEach(function(f) {
 			function transpile(code) {
 				try {
-					return esperanto[method](code, options.bundleOpts).code;
+					if (options.type === 'amd') {
+						if (options.filePathAsModule) {
+							var fileName = f.src[0];
+							var moduleName = fileName.replace(/\.js$/i, '');
+
+							options.bundleOpts.amdName = moduleName;
+							return esperanto[method](code, options.bundleOpts).code;
+						} else {
+							return esperanto[method](code, options.bundleOpts).code;
+						}
+					} else {
+						return esperanto[method](code, options.bundleOpts).code;
+					}
 				} catch (err) {
 					// Direct throw config errors
 					if (err.name === 'EsperantoError') {

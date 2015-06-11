@@ -64,6 +64,12 @@ Default value: `{}`
 
 Accept an esperanto [options](https://github.com/esperantojs/esperanto/wiki/Converting-a-single-module#options) parameter.
 
+#### options.filePathAsModule
+Type: `Boolean`
+Default value: `false`
+
+When outputting an amd module, if true will use the file path as the module name, stripping the `.js` suffix. This supercedes using `bundleOpts.amdName` which is a static equivalent.
+
 ### Usage Examples
 
 ```js
