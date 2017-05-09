@@ -1,5 +1,7 @@
 # grunt-esperanto
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/grunt-esperanto.svg)](https://greenkeeper.io/)
+
 > Wrapper for the [esperanto](https://github.com/esperantojs/esperanto) module transpiler
 
 [![CI](http://img.shields.io/travis/developit/grunt-esperanto.svg?style=flat)](https://travis-ci.org/developit/grunt-esperanto)
